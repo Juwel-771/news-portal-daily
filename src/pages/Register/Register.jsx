@@ -1,18 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import Navbar from "../Shared/Navbar/Navbar";
 import { Link } from "react-router";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Register = () => {
-  const handleRegisterForm = (e) => {
-    e.preventDefault();
-    console.log(e.currentTarget); // return current form
-    const form = new FormData(e.currentTarget);
-    const name = form.get("name");
-    const email = form.get("email");
-    const password = form.get("password");
-    const photoURL = form.get("photoURL"); // return current form data
-    console.log(name, email, password, photoURL); // return cu
-  };
+
+    const {createUser} = useContext(AuthContext);
+    
+    const handleRegisterForm = (e) => {
+        e.preventDefault();
+        console.log(e.currentTarget); // return current form
+        const form = new FormData(e.currentTarget);
+        const name = form.get("name");
+        const email = form.get("email");
+        const password = form.get("password");
+        const photoURL = form.get("photoURL"); // return current form data
+        console.log(name, email, password, photoURL); // return current form data
+
+        createUser(email, password)
+        .then((result) => {
+            console.log("account created successfully",result.user)
+        }).catch((err) => {
+            console.log(err);
+        });
+
+    };
 
   return (
     <div>
