@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router";
-import userPofile from '../../../assets/star.png'
+// import userPofile from '../../../assets/star.png'
 
 const Navbar = () => {
 
@@ -8,6 +8,7 @@ const Navbar = () => {
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/about'>About</NavLink></li>
         <li><NavLink to='/career'>Career</NavLink></li>
+        <li><NavLink to='/login'>Login</NavLink></li>
     </>
 
   return (
@@ -52,7 +53,7 @@ const Navbar = () => {
             src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
         </div>
       </div>
-        <Link><button className="btn btn-info">Login</button></Link>
+        <Link to='/login'><button className="btn btn-info">Login</button></Link>
       </div>
     </div>
   );
