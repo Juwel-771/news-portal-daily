@@ -2,18 +2,20 @@ import React from "react";
 import { Link } from "react-router";
 
 const NewsCard = ({ news }) => {
-    const {title, thumbnail_url, details} = news;
+    const {_id,title, image_url, details} = news;
   return (
     <div className="card bg-base-100 shadow-xl mb-16 border-b-2">
       <figure>
         <img
-         src={thumbnail_url}
+         src={image_url}
         />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
           {
-            details.length > 200 ? <p>{details.slice(200)} <Link className="text-blue-600 font-bold">Read More..</Link> </p>
+            details.length > 200 ? 
+                <p>{details.slice(200)} 
+                <Link to={`/newsDetails/${_id}`} className="text-blue-600 font-bold">Read More..</Link> </p>
             :
             <p>{details}</p>
           }
