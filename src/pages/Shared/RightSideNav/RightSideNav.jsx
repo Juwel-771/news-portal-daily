@@ -3,6 +3,9 @@ import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 
+import qz1 from '../../../assets/class.png';
+import qz2 from '../../../assets/playground.png';
+import qz3 from '../../../assets/swimming.png';
 
 const RightSideNav = () => {
   return (
@@ -57,21 +60,33 @@ const RightSideNav = () => {
           Login with Google
         </button>
       </div>
-        <div className="py-4 mb-6 ">
-            <h2 className="text-2xl mb-2 text-center">Find Us</h2>
-                <a className="p-4 flex text-sm items-center border rounded-t-lg" href="#">
-                    <FaFacebook className="mr-3" />
-                    Facebook
-                </a>
-                <a className="p-4 flex text-sm items-center border rounded-x" href="#">
-                    <FaTwitter className="mr-3" />
-                    Instagram
-                </a>
-                <a className="p-4 flex text-sm items-center border rounded-b-lg" href="#">
-                    <FaInstagramSquare className="mr-3" />
-                    Instagram
-                </a>
-        </div>
+      <div className="py-4 mb-6 ">
+        <h2 className="text-2xl mb-2 text-center">Find Us</h2>
+        <a
+          className="p-4 flex text-sm items-center border rounded-t-lg"
+          href="#"
+        >
+          <FaFacebook className="mr-3" />
+          Facebook
+        </a>
+        <a className="p-4 flex text-sm items-center border rounded-x" href="#">
+          <FaTwitter className="mr-3" />
+          Instagram
+        </a>
+        <a
+          className="p-4 flex text-sm items-center border rounded-b-lg"
+          href="#"
+        >
+          <FaInstagramSquare className="mr-3" />
+          Instagram
+        </a>
+      </div>
+      <div className="py-4 mb-6">
+        <h2 className="text-2xl mb-2 text-center">Find Us</h2>
+        <img src={qz1} alt="" />
+        <img src={qz2} alt="" />
+        <img src={qz3} alt="" />
+      </div>
     </div>
   );
 };
