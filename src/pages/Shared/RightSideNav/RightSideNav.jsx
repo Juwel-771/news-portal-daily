@@ -1,11 +1,15 @@
 import React from "react";
+import { FaFacebook } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
+
 
 const RightSideNav = () => {
   return (
     <div>
-      <div className="py-4 space-y-3">
-        <h2>Login With</h2>
-        <button className="btn bg-black text-white border-black w-full">
+      <div className="py-4 space-y-2 mb-6">
+        <h2 className="text-2xl text-center">Login With</h2>
+        <button className="btn btn-outline bg-black text-white border-black w-full">
           <svg
             aria-label="GitHub logo"
             width="16"
@@ -53,6 +57,21 @@ const RightSideNav = () => {
           Login with Google
         </button>
       </div>
+        <div className="py-4 mb-6 ">
+            <h2 className="text-2xl mb-2 text-center">Find Us</h2>
+                <a className="p-4 flex text-sm items-center border rounded-t-lg" href="#">
+                    <FaFacebook className="mr-3" />
+                    Facebook
+                </a>
+                <a className="p-4 flex text-sm items-center border rounded-x" href="#">
+                    <FaTwitter className="mr-3" />
+                    Instagram
+                </a>
+                <a className="p-4 flex text-sm items-center border rounded-b-lg" href="#">
+                    <FaInstagramSquare className="mr-3" />
+                    Instagram
+                </a>
+        </div>
     </div>
   );
 };
