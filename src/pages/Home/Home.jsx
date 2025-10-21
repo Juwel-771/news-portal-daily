@@ -17,7 +17,6 @@ const Home = () => {
             <Header></Header>
             <BreakingNews></BreakingNews>
             <Navbar></Navbar>
-            <h1 className='text-3xl font-poppins'>This is Home</h1>
             <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
                 <div>
                     <LeftSideNav></LeftSideNav>
