@@ -3,17 +3,26 @@ import Navbar from "../Shared/Navbar/Navbar";
 import { Link } from "react-router";
 
 const Register = () => {
-
-    const handleRegisterForm = (e)=>{
-        e.preventDefault();
-    }
+  const handleRegisterForm = (e) => {
+    e.preventDefault();
+    console.log(e.currentTarget); // return current form
+    const form = new FormData(e.currentTarget);
+    const name = form.get("name");
+    const email = form.get("email");
+    const password = form.get("password");
+    const photoURL = form.get("photoURL"); // return current form data
+    console.log(name, email, password, photoURL); // return cu
+  };
 
   return (
     <div>
-        <Navbar></Navbar>
+      <Navbar></Navbar>
       <div>
         <h2 className="text-3xl my-10 text-center">Create Accounts</h2>
-        <form onSubmit={handleRegisterForm} className="md:w-3/4 lg:w-1/2 mx-auto">
+        <form
+          onSubmit={handleRegisterForm}
+          className="md:w-3/4 lg:w-1/2 mx-auto"
+        >
           <fieldset className="fieldset">
             <label className="label">Name</label>
             <input
@@ -25,7 +34,7 @@ const Register = () => {
             <label className="label">Photo URL</label>
             <input
               type="text"
-              name="photoUrl"
+              name="photoURL"
               className="input"
               placeholder="Photo URL"
             />
