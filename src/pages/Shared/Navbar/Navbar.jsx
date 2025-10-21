@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router";
+import userPofile from '../../../assets/star.png'
 
 const Navbar = () => {
 
@@ -44,6 +45,13 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
+        <div tabindex="0" role="button" className="mr-2 btn btn-ghost btn-circle avatar">
+        <div class="w-10 rounded-full">
+          <img
+            alt="Tailwind CSS Navbar component"
+            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+        </div>
+      </div>
         <Link><button className="btn btn-info">Login</button></Link>
       </div>
     </div>
